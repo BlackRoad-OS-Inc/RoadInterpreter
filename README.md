@@ -1,3 +1,11 @@
+# RoadInterpreter
+
+> Road Fleet: RoadInterpreter — your tools, your device. BlackRoad OS, Inc.
+
+Part of the [BlackRoad OS](https://blackroad.io) ecosystem — [BlackRoad-OS-Inc](https://github.com/BlackRoad-OS-Inc)
+
+---
+
 <h1 align="center">● Open Interpreter</h1>
 
 <p align="center">
@@ -315,7 +323,9 @@ app = FastAPI()
 def chat_endpoint(message: str):
     def event_stream():
         for result in interpreter.chat(message, stream=True):
-            yield f"data: {result}\n\n"
+            yield f"data: {result}
+
+"
 
     return StreamingResponse(event_stream(), media_type="text/event-stream")
 
